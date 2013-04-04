@@ -1,0 +1,6 @@
+#!/bin/sh
+
+SOURCE=jquery.annotate
+
+coffee --bare --lint --map --compile $SOURCE.coffee
+uglifyjs $SOURCE.js --compress --mangle --comments --output $SOURCE.min.js
